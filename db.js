@@ -2,7 +2,7 @@ const { Sequelize } = require('sequelize')
 
 // Database
 const sequelize = new Sequelize(
-  'postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DATABASE}\n', // TODO: database connection string
+  '${POSTGRES_URL}\n', // TODO: database connection string
   {
     dialect: 'postgres',
     dialectOptions: {

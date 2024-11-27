@@ -16,3 +16,4 @@ services:
 databases:
   - name: esgi.render.postgre # A PostgreSQL database named django-app-db running on a free instance
     plan: free
+    region: frankfurt

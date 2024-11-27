@@ -1,0 +1,19 @@
+services:
+  - name: nodejs-app-feat-Janino
+    plan: free
+    type: web
+    runtime: node
+    plan: free
+    buildCommand: npm i
+    startCommand: npm start
+    region: frankfurt
+    envVars:
+      - key: POSTGRES_URL # Sets DATABASE_URL to the connection string of the django-app-db database
+        fromDatabase:
+          name: esgi.render.postgre
+          property: connectionString
+
+
+databases:
+  - name: esgi.render.postgre # A PostgreSQL database named django-app-db running on a free instance
+    plan: free

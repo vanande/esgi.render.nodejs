@@ -3,7 +3,6 @@ services:
     plan: free
     type: web
     runtime: node
-    plan: free
     buildCommand: npm i
     startCommand: npm start
     region: frankfurt
